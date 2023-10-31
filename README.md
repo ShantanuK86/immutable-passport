@@ -20,7 +20,7 @@
   - Instant transaction confirmation for an enhanced user experience.
 
 - **Cost-Effectiveness:**
-  - Cheaper (sometimes free) transactions using 'rollups' that batch multiple transactions into a single, cost-effective transaction on Layer 1.
+  - Cheaper (sometimes free) transactions using 'rollups' that batch multiple transactions into a single,cost-effective transaction on Layer 1.
 
 - **Security:**
   - Maintains Ethereum-level security by batching and settling Layer 2 transactions on Layer 1.
@@ -38,7 +38,7 @@ Before you begin, make sure you have the following:
 - Latest version of node.
 - Basic ReactJS or NextJS knowlegde
 
-### 1.Git cloning a repository of the simple application4
+### 1. Git cloning a repository of the simple application4
 You can create a simple Next.js application or clone a repository of a pre-built application. Ensure that your application is set up and running.
 ### 2. Registering the Application on Immutable Developer Hub
 Before using Passport, you must register your application as an OAuth 2.0 client in the Immutable Developer Hub. First, you'll need to create a project and a testnet environment. Then you can navigate to the Passport config screen and create a passport client for your created environment. 
@@ -73,7 +73,7 @@ Here,
 - **audience**: audience is a string specifying the intended audience for the issued token, e.g., 'platform_api' for Immutable protocol APIs.
 - **scope**: scope defines the access privileges requested, including custom scopes like 'transact' and standard OpenID Connect (OIDC) scopes such as 'openid', 'offline_access', and 'email'.
 ### 4. Logging in a User with Passport
-
+Users are required to log in before your application is able to interact with the user's wallet, or call any user specific functionality.
 To log in a user, use the following code snippet:
 
 ```javascript
@@ -92,7 +92,7 @@ const fetchAuth = async () => {
 };
 ```
 ### 5. Logging Out a User
-
+To sign a user out of both your application and Passport, simply employ the logout function available on the Passport instance.
 To log out a user, use the following code:
 
 ```javascript
@@ -127,19 +127,9 @@ const displayUserInfo = async () => {
 // Call the function when needed to display user information
 displayUserInfo();
 ```
-### 7. Logging Out a User
 
-You can use the logout function on the Passport instance.
 
-```javascript
-import { passportInstance } from "@/lib/immutable";
-
-const handleLogout = () => {
-  passportInstance.logout();
-};
-```
-
-### 8.Initiate a transaction using Passport
+### 7.Initiate a transaction using Passport
 To start a transaction using Passport, you just need to give it the required information about the transaction data and parameters.
 
 
